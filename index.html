@@ -9,14 +9,39 @@
 <body>
 
     <h1> Matrices Calculator </h1>
-     <form action="" onclick="table(); return false">
-        <input type="number"><input type="number">
+     <form  onsubmit="table(); return false">
+        <input type="number" id="matGen1"><input type="number" id="matGen2">
         <br>
         <button type="submit"> Get Matric Boxes </button>
     </form>
 
+
+    
     <form action="" onclick="cal(); return false">
+       <!-- <div id="fMat"></div> -->
+       <table>
+           <td id="fMat" ></td>
+       </table>
     </form>
+
+
+    <script>
+        function table() {
+            let matGen1 = document.querySelector("#matgen1").value ;
+             for (let i = 0 ; i < matGen1 ; i++) {
+                 let fMat = document.querySelector("#fMat") ; 
+                 fMat.innerHTML += `<tr>` `</td>` ; 
+
+               for (let j = 0; j < matGen1 ; j++) {
+                   fMat.innerHTML += `<input>` 
+        
+                    
+                }    
+             
+             }
+            
+        }
+    </script>
     
 </body>
 </html>
