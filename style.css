@@ -1,0 +1,16 @@
+#matInput{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#mat1{
+    display: inline-block;
+    background-color: yellowgreen;
+}
+#mat2{
+    background-color: red;
+    display: inline-block;
+}
+#dropdown{
+    background-color: blue;
+}
