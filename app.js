@@ -17,11 +17,11 @@ function start()  {
         for (let j = 0; j < matGen2; j++) {
        
             mat1.innerHTML += `<input placeholder="0"  id="fMat1${i}_${j}"
-             class="1iB" required type="number" min="0" max="100"> ` ;
+             class="1iB" required type="number" min="0" max="100" value="0"> ` ;
             console.log(i+1)
            
             mat2.innerHTML += `<input placeholder="0"  id="fMat2${i}_${j}"
-             class="2iB" required type="number" min="0" max="100"> ` ;
+             class="2iB" required type="number" min="0" max="100" value="0"> ` ;
                     console.log(i+1)
            
             result.innerHTML +=  `<input type="number" disabled required min="0"
