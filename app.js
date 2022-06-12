@@ -8,7 +8,7 @@ function start()  {
     for (let i = 0; i < matGen1; i++) {
         for (let j = 0; j < matGen2; j++) {
        
-            mat1.innerHTML += `<input size="1"  placeholder="0"  id = "fMat1${i}_${j}" class="iB"> ` ;
+            mat1.innerHTML += `<input size="1"  placeholder="0"  id = fMat1${i}_${j} class="1iB"> ` ;
             console.log(i+1)
         }
         mat1.innerHTML += "<br>";
@@ -17,7 +17,7 @@ function start()  {
     for (let i = 0; i < matGen1; i++) {
         for (let j = 0; j < matGen2; j++) {
            
-            mat2.innerHTML += `<input size="1"  placeholder="0"  id = "fMat2${i}_${j}" class="iB"> ` ;
+            mat2.innerHTML += `<input size="1"  placeholder="0"  id = fMat2${i}_${j} class="2iB"> ` ;
             console.log(i+1)
         }
         mat2.innerHTML += "<br>";
@@ -49,16 +49,18 @@ function cal() {
  
     let matGen1 = document.querySelector("#matGen1").value ;
     let matGen2 = document.querySelector("#matGen2").value ;
+
+    let fMat1 = document.querySelector(`#fmat1${i}_${j}`).value  ;
+    let fMat2 = document.querySelector(`#fMat2${i}_${j}`).value ;
+      
+    let result = Number(fMat1) + Number(fMat2);
+
+    let gResult = document.querySelector(`#result`) ;
  
     for (let i = 0; i < matGen1 ; i++) {
         
         for (let j = 0; j < matGen2; j++) {
-        let fMat1 = document.querySelector(`#fmat1${i}_${j}`).value  ;
-        let fMat2 = document.querySelector(`#fMat2${i}_${j}`).value ;
-          
-        let result = Number(fMat1) + Number(fMat2);
-
-        let gResult = document.querySelector(`#result`) ;
+      
         
         gResult.innerHTML += ` <h1> ${result} </h1> ` ;   
         
