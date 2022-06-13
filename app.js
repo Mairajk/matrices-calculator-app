@@ -11,6 +11,19 @@ function start()  {
         mat1.innerHTML = "";
         mat2.innerHTML = ""; 
         result.innerHTML = "" ;
+
+    if (matGen1 !== matGen2) {
+        alert("Please enter equal value for dimension ") ;
+    }
+
+    if ( matGen1 < 2 || matGen2 < 2)  {
+        alert("Please enter a valid number for dimension") ;
+        return;
+    }
+    if (isNaN(matGen1) || isNaN(matGen2)) {
+        alert("Please enter a number ")
+    }
+
        
 
     for (let i = 0; i < matGen1; i++) {
@@ -37,21 +50,44 @@ function start()  {
     let checksign = document.querySelector("#checksign").value ;
     let dropDown = document.querySelector("#dropDown") ;
     dropDown.innerHTML = checksign ; 
-    document.querySelector("#equal").innerHTML = "=" ;    
+    document.querySelector("#equal").innerHTML = "=" ;  
+    document.querySelector("#calculate").innerHTML = `<button type="submit"> Calculate </button> ` ; 
   
 
 }
 
 
 function cal() {
+    // let checksign = document.querySelector("#checksign").value ;
+    // let dropDown = document.querySelector("#dropDown") ;
+    // dropDown.innerHTML = checksign ; 
+    
+    let matGen1 = document.querySelector("#matGen1").value ;
+    let matGen2 = document.querySelector("#matGen2").value ;
+   
     
     for (let i = 0; i < matGen1 ; i++) {
         
         for (let j = 0; j < matGen2; j++) {
+            
+     checksign = document.querySelector("#checksign").value ;
+    
 
-            document.querySelector(`#result${i}_${j}`).value =
-            +document.querySelector(`#fMat1${i}_${j}`).value +
-            +document.querySelector(`#fMat2${i}_${j}`).value ;  
+    if (checksign == `+`) {
+      
+        document.querySelector(`#result${i}_${j}`).value =
+        +document.querySelector(`#fMat1${i}_${j}`).value  + 
+        +document.querySelector(`#fMat2${i}_${j}`).value ;  
+    } 
+    else if (checksign == `-` ) {
+        
+        document.querySelector(`#result${i}_${j}`).value =
+        +document.querySelector(`#fMat1${i}_${j}`).value  - 
+        +document.querySelector(`#fMat2${i}_${j}`).value ;  
+    }
+    else {
+        alert("Please select an operation")
+    }
         }
         
     }

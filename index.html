@@ -10,36 +10,39 @@
 <body>
 
     <h1> Matrices Calculator </h1>
-     <form  onsubmit="start() ; return false ;">
-        <input type="number" id="matGen1">
-        <input type="number" id="matGen2">
-        <br>
-        
-      <select name="" id="checksign" required>
+     <form  onsubmit="start() ; return false ;" id="form1">
+        <div id="f1Input">
+        <input type="number" id="matGen1" placeholder="Enter dimesion of matix : " class="f1I" autofocus >
+        <input type="number" id="matGen2" placeholder="Enter dimesion of matix : " autofocus  class="f1I">
+        <!-- <br>
+         -->
+      <select name="" id="checksign" required aria-placeholder="ssss" class="f1I">
       <option value="select"> Select an operation sign </option>
       <option value="+"> + </option>
       <option value="-"> - </option>
       </select>
-    
-      <button type="submit"> Get Matric Boxes </button>
+    </div>    
+      <br>
+
+      <button type="submit" id="gMb"> Get Matric Boxes </button>
 
     </form>
 
 
     
-    <form action="" onsubmit="cal(); return false">
+    <form action="" onsubmit="cal(); return false" id="form2">
      <div id="matInput">
-       <div id="mat1"> </div>
+       <div id="mat1"  class="f2I" > </div>
 
-       <div> <h1 id="dropDown"></h1> </div>
+       <div> <h1 id="dropDown" class="sign"></h1> </div>
 
-       <div id="mat2"></div>
+       <div id="mat2" class="f2I"></div>
 
-       <div> <h1 id="equal"></h1> </div>
+       <div> <h1 id="equal" class="sign"></h1> </div>
 
-       <div id="result"></div>
+       <div id="result" class="f2I"></div>
      </div>
-     <button type="submit">Calculate</button>
+     <div id="calculate"></div>
        
     </form>
 

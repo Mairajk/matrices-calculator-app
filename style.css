@@ -1,4 +1,4 @@
-#matInput{
+/* #matInput{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -13,4 +13,38 @@
 }
 #dropdown{
     background-color: blue;
+} */
+
+#form1{
+    text-align: center;
+}
+#f1Input{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.f1I{
+    margin: 10px;
+}
+#matInput{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 5px solid black; */
+}
+.f2I{
+    margin: 10px;
+    border: 2px solid black;
+    padding: 5px;
+}
+.sign{
+    margin: 30px ;
+}
+#calculate{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px ;
+
 }
