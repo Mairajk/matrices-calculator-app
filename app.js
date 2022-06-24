@@ -1,7 +1,11 @@
-function start()  {
-
+ 
     let matGen1 = document.querySelector("#matGen1").value ;
     let matGen2 = document.querySelector("#matGen2").value ;
+   
+    function start()  {
+
+    // let matGen1 = document.querySelector("#matGen1").value ;
+    // let matGen2 = document.querySelector("#matGen2").value ;
    
     let mat1 = document.querySelector("#mat1");
     let mat2 = document.querySelector("#mat2");
@@ -62,9 +66,10 @@ function cal() {
     // let dropDown = document.querySelector("#dropDown") ;
     // dropDown.innerHTML = checksign ; 
     
-    let matGen1 = document.querySelector("#matGen1").value ;
-    let matGen2 = document.querySelector("#matGen2").value ;
-   
+    // let matGen1 = document.querySelector("#matGen1").value ;
+    // let matGen2 = document.querySelector("#matGen2").value ;
+   let matrix1 = []
+    let matrix2 = []
     
     for (let i = 0; i < matGen1 ; i++) {
         
